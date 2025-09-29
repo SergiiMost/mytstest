@@ -13,7 +13,9 @@
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "test": "vitest run",
-    "dev": "vitest"
+    "dev": "vitest",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "npm run ci"
   },
   "homepage": "https://github.com/SergiiMost/mytstest",
   "bugs": {
@@ -26,6 +28,7 @@
   "type": "module",
   "main": "dist/index.js",
   "devDependencies": {
+    "@changesets/cli": "^2.29.7",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
